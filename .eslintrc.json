@@ -28,11 +28,8 @@
       "error",
       {
         "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
+        "unnamedComponents": "arrow-function",
       }
-      // {
-      //   "usePrettierrc": false
-      // }
     ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": ["warn"],
@@ -41,7 +38,8 @@
       "error",
       {
         "singleQuote": true,
-        "parser": "flow"
+        "parser": "flow",
+        "endOfLine": "auto"
       }
     ],
     "arrow-body-style": "off",
