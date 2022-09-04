@@ -1,4 +1,19 @@
 {
+  "root": true,
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/ignore": ["react"],
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      },
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true,
@@ -6,12 +21,13 @@
   },
   "extends": [
     "react-app",
-    "react-app/jest",
+    // "react-app/jest/recommended",
     "airbnb",
     "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended"
   ],
   "overrides": [],
   "parserOptions": {
@@ -21,17 +37,20 @@
   "plugins": ["react", "prettier"],
   "rules": {
     // Eslint
-    "import/prefer-default-export": 2,
+    "import/prefer-default-export": 0,
     // React
     "react/react-in-jsx-scope": ["off"],
     "react/function-component-definition": [
       "error",
       {
         "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
       }
     ],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "react/jsx-props-no-spreading": ["warn"],
     // Prettier
     "prettier/prettier": [
